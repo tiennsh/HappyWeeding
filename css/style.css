@@ -1,0 +1,591 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/MyFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(-50px); /* dịch từ trên xuống */
+  transition: all 0.8s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  margin: 0;
+  font-family: 'MyFont', sans-serif;
+  background: url("../img/background.jpg") no-repeat center top;
+  background-size: 100%;
+  display: flex;
+  background-attachment: scroll;
+}
+
+/* Hero */
+/* .hero {
+  background: linear-gradient(to bottom, #d8e8d8, #f6f9f4);
+  padding: 40px 20px;
+} */
+ .wedding-wrapper {
+  width: 100vw;             /* chiếm toàn bộ chiều ngang */
+  height: 100vh;            /* chiếm toàn bộ chiều cao */
+}
+
+.wedding-content {
+  width: 1080px;            
+  transform-origin: top center;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;   /* xếp dọc */
+  align-items: center;      /* căn giữa ngang */
+  gap: 5px; 
+}
+.hero-title {
+  width: 40%;
+  margin-top: 10%;
+  animation-delay: 0.2s;
+}
+.hero-img {
+  width: 80%;
+  animation-delay: 0.3s;
+}
+.couple-name {
+  width: 75%;
+  animation-delay: 0.3s;
+}
+.wedding-date-month {
+  width: 20%;
+  animation-delay: 0.3s;
+}
+.wedding-date-year {
+  width: 15%;
+  animation-delay: 0.3s;
+}
+.wedding-date {
+  width: 60%;
+  margin-left: 35px;
+  animation-delay: 0.3s;
+}
+.wedding-date-lunar-calendar {
+  width: 60%;
+  margin-top: 5px;
+  animation-delay: 0.3s;
+}
+
+
+/* Wedding info */
+.ourwedding-info {
+  display: flex;
+  flex-direction: column;   /* xếp dọc */
+  align-items: center;      /* căn giữa ngang */
+  gap: 5px; 
+}
+.ourwedding-1 {
+  width: 30%;
+  margin-top: 45%;
+  animation-delay: 0.3s;
+}
+.ourwedding-2 {
+  width: 50%;
+  margin-top: 5%;
+  animation-delay: 0.3s;
+}
+.ourwedding-3 {
+  width: 25%;
+  margin-top: 1%;
+  animation-delay: 0.3s;
+}
+.ourwedding-4 {
+  width: 55%;
+  margin-top: 5%;
+  animation-delay: 0.3s;
+}
+.ourwedding-grid-1 {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10%;
+  animation-delay: 0.3s;
+}
+.ourwedding-grid-2 {
+  width: 90%;
+  margin-left: 5%;
+  animation-delay: 0.3s;
+}
+.ourwedding-grid-3 {
+  width: 90%;
+  margin-left: 5%;
+  animation-delay: 0.3s;
+}
+.ourwedding-grid-4 {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 3%;
+  animation-delay: 0.3s;
+}
+.ourwedding-grid-5 {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1%;
+  animation-delay: 0.3s;
+}
+.ourwedding-5 {
+  width: 50%;
+  margin-top: 5%;
+  animation-delay: 0.3s;
+}
+.ourwedding-6 {
+  width: 40%;
+  margin-top: 7%;
+  animation-delay: 0.3s;
+}
+.ourwedding-7 {
+  width: 80%;
+  margin-top: 3%;
+  animation-delay: 0.3s;
+}
+.ourwedding-8 {
+  width: 50%;
+  margin-top: 2%;
+  animation-delay: 0.3s;
+}
+.ourwedding-9 {
+  width: 45%;
+  margin-top: 2%;
+  animation-delay: 0.3s;
+}
+.ourwedding-10 {
+  width: 70%;
+  margin-top: 2%;
+  animation-delay: 0.3s;
+}
+.ourwedding-11 {
+  width: 70%;
+  margin-top: 3%;
+  animation-delay: 0.3s;
+}
+.ourwedding-button {
+  width: 180px;
+  height: 40px;
+  background: url("../img/button_xem_chi_duong.png") no-repeat center/cover;
+  margin-top: 2%;
+  animation-delay: 0.3s;
+}
+.map img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+.ourweddingwoments-info {
+  display: flex;
+  flex-direction: column;   /* xếp dọc */
+  align-items: center;      /* căn giữa ngang */
+  gap: 5px; 
+}
+.ourweddingwoments-1 {
+  width: 40%;
+  margin-top: 45%;
+  animation-delay: 0.3s;
+}
+.grid-1 {
+  display: grid;
+  margin-top: 5%;
+  width: 90%;
+  grid-template-columns: repeat(10, 1fr); /* 6 cột để dễ chia tỉ lệ */
+  gap: 10px;
+}
+.grid-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.grid-1 img.grid-1_0 {
+  grid-column: span 5;
+  grid-row: span 1;
+  border-radius: 0px;
+}
+.grid-1 img.grid-1_1 {
+  grid-column: span 5;
+  grid-row: span 4;
+}
+.grid-1 img.grid-1_2 {
+  grid-column: span 3;
+  grid-row: span 4;
+}
+.grid-1 img.grid-1_3 {
+  grid-column: span 2;
+  grid-row: span 4;
+}
+.grid-1 img.grid-1_4 {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+.grid-1 img.grid-1_5 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.grid-1 img.grid-1_6 {
+  grid-column: span 5;
+  grid-row: span 1;
+}
+
+.grid-2 {
+  display: grid;
+  margin-top: 3%;
+  width: 90%;
+  grid-template-columns: repeat(12, 1fr); /* 6 cột để dễ chia tỉ lệ */
+  gap: 10px;
+}
+.grid-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.grid-2 img.grid-2_0 {
+  grid-column: span 5;
+  grid-row: span 1;
+  margin-left: 75%;
+  border-radius: 0px;
+}
+.grid-2 img.grid-2_1 {
+  grid-column: span 10;
+  grid-row: span 1;
+  margin-left: 10%;
+}
+.grid-2 img.grid-2_2 {
+  grid-column: span 6;
+  grid-row: span 4;
+  margin-top: 5%;
+}
+.grid-2 img.grid-2_3 {
+  grid-column: span 3;
+  grid-row: span 2;
+  margin-top: 10%;
+}
+.grid-2 img.grid-2_4 {
+  grid-column: span 3;
+  grid-row: span 2;
+  margin-top: 10%;
+}
+.grid-2 img.grid-2_5 {
+  grid-column: span 3;
+  grid-row: span 2;
+  margin-top: 10%;
+}
+.grid-2 img.grid-2_6 {
+  grid-column: span 3;
+  grid-row: span 2;
+  margin-top: 10%;
+}
+
+.grid-3 {
+  display: grid;
+  margin-top: 10%;
+  width: 90%;
+  grid-template-columns: repeat(11, 1fr); /* 6 cột để dễ chia tỉ lệ */
+  gap: 10px;
+}
+.grid-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  /* border-radius: 8px; */
+}
+.grid-3 img.grid-3_0 {
+  grid-column: span 4;
+  grid-row: span 1;
+  margin-left: 30%;
+}
+.grid-3 img.grid-3_1 {
+  grid-column: span 4;
+  grid-row: span 1;
+  margin-left: 30%;
+}
+.grid-3 img.grid-3_2 {
+  margin-top: -10%;
+  grid-column: span 5;
+  grid-row: span 7;
+  border-radius: 8px;
+}
+.grid-3 img.grid-3_3 {
+  margin-top: 8%;
+  grid-column: span 3;
+  grid-row: span 4;
+  border-radius: 8px;
+}
+.grid-3 img.grid-3_4 {
+  margin-top: 8%;
+  grid-column: span 3;
+  grid-row: span 2;
+  border-radius: 8px;
+}
+.grid-3 img.grid-3_5 {
+  margin-top: 8%;
+  grid-column: span 3;
+  grid-row: span 2;
+  border-radius: 8px;
+}
+
+.ourattendding-info {
+  display: flex;
+  flex-direction: column;   /* xếp dọc */
+  align-items: center;      /* căn giữa ngang */
+  gap: 5px;  
+}
+.ourattendding-1 {
+  width: 45%;
+  margin-top: 36%;
+  animation-delay: 0.3s;
+}
+.ourattendding-2 {
+  width: 85%;
+  margin-top: 3%;
+  animation-delay: 0.3s;
+}
+
+.wedding-form-1 {
+  margin: auto;
+  width: 90%;        
+  margin-top: 5%;
+  margin-left: 8%;
+  position: relative;
+  z-index: 1;           /* đảm bảo nổi trên background */
+  animation-delay: 0.3s;
+}
+
+.wedding-form-1 img {
+  display: block;
+  margin: 2%;
+  max-width: 90%;
+  height: auto;
+}
+
+.form-section {
+  margin-left: 10%;
+}
+.form-section-1
+{
+  width: 25%;
+  margin-top: 5%;
+}
+.form-section-2 
+{
+  width: 80%;
+  margin-top: -2px;
+}
+.form-section-3 
+{
+  width: 95%;
+}
+/* Ẩn input mặc định */
+input[type="radio"],
+input[type="text"],
+textarea {
+  display: none;
+}
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.input-wrapper input {
+  display: block;
+  width: 80%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-wrapper textarea {
+  height: 15%;
+  resize: none;
+}
+.input-form-name {
+  width: 25%;
+  left: 30%;
+}
+
+.wedding-form-1 input {
+  display: none; /* Ẩn input mặc định */
+}
+.tham_du-title {
+  width: 30%;
+  margin-left: -10%;
+}
+.tham-du {
+  width: 100%;
+  display: flex;
+  flex-direction: row; 
+  margin-left: 5%;
+}
+.tham-du-1 {
+  width: 70%;
+}
+
+.tham-du-2 {
+  width: 70%;
+}
+
+.chon-nguoi label {
+  cursor: pointer;
+  margin: 10px;
+  display: inline-block;
+}
+
+/* Khi chọn radio => đổi ảnh */
+.tham-du input[value="yes"]:checked + img {
+  content: url("../img/oke_minh_se_den.png");
+}
+
+.tham-du input[value="no"]:checked + img {
+  content: url("../img/tiec_qua_minh_khong_den_duoc.png");
+}
+
+/* Ẩn input gốc */
+.option input {
+  display: none;
+}
+
+.chon-nguoi {
+  width: 70%;
+  display: flex;
+  flex-direction: row; 
+  margin-left: 10%;
+}
+.chon-nguoi-title {
+  width: 50%;
+  margin-left: 10%;
+}
+
+.option {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10%;
+}
+
+/* Hình gốc vẫn hiển thị */
+.option img {
+  display: block;
+  max-width: 60%; /* chỉnh kích thước tùy ý */
+}
+
+/* Tạo ô tích overlay */
+.option .checkmark {
+  position: absolute;
+  top: 1px; 
+  right: 100%;
+  width: 20px;
+  height: 20px;
+  background: url("../img/o_chua_tich.png") no-repeat center/contain;
+  pointer-events: all; /* không cản trở click */
+}
+
+/* Khi được chọn thì đổi sang ô tích */
+.option input:checked + img + .checkmark {
+  background-image: url("../img/o_tich_chon.png");
+}
+
+.input-wrapper-1 input {
+  display: block;
+  width: 80%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  font-size: 16px;
+  outline: none;
+}
+.input-wrapper-1 textarea {
+  display: block;
+  width: 85%;
+  min-height: 100px; /* cho phép nhiều dòng */
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  font-size: 16px;
+  outline: none;
+  resize: vertical; /* cho phép kéo giãn */
+  line-height: 1.4;
+  white-space: pre-wrap; /* giữ xuống dòng */
+}
+
+.form-wish-1 {
+  width: 60%;
+}
+
+.submit-btn {
+  width: 40%;
+  margin-left: 10%;
+}
+.submit-btn-img {
+  width: 100%;
+}
+
+.outwedding-gifts {
+  display: flex;
+  flex-direction: column;   /* xếp dọc */
+  align-items: center;      /* căn giữa ngang */
+  gap: 5px;  
+}
+
+.outwedding-gifts-1 {
+  width: 35%;
+  margin-top: 25%;
+}
+
+.outwedding-gifts-2 {
+  width: 80%;
+}
+.outwedding-gifts-3 {
+  width: 80%;
+  margin-top: 5%;
+}
+.outwedding-gifts-4 {
+  width: 60%;
+  margin-top: 5%;
+}
+.outwedding-gifts-5 {
+  width: 80%;
+}
+.outwedding-gifts-6 {
+  width: 80%;
+}
+.outwedding-gifts-7 {
+  width: 80%;
+  margin-bottom: 20%;
+}
+
+
+.footer-section {
+  margin-bottom: 80px;   /* tạo khoảng trống 80px bên dưới */
+  /* hoặc dùng padding-bottom nếu muốn kéo nội dung cách lên */
+  /* padding-bottom: 80px; */
+}
