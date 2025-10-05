@@ -26,7 +26,7 @@
 body {
   margin: 0;
   font-family: 'MyFont', sans-serif;
-  background: url("../img/background.jpg") no-repeat center top;
+  background: url("../img/background.png") no-repeat center top;
   background-size: 100%;
   display: flex;
   background-attachment: scroll;
@@ -83,6 +83,10 @@ body {
   margin-top: 5px;
   animation-delay: 0.3s;
 }
+.hoa_element {
+  width: 99%;
+  margin-top: 3%;
+}
 
 
 /* Wedding info */
@@ -94,7 +98,7 @@ body {
 }
 .ourwedding-1 {
   width: 30%;
-  margin-top: 45%;
+  margin-top: 3%;
   animation-delay: 0.3s;
 }
 .ourwedding-2 {
@@ -112,6 +116,7 @@ body {
   margin-top: 5%;
   animation-delay: 0.3s;
 }
+
 .ourwedding-grid-1 {
   width: 90%;
   margin-left: 5%;
@@ -124,8 +129,8 @@ body {
   animation-delay: 0.3s;
 }
 .ourwedding-grid-3 {
-  width: 90%;
-  margin-left: 5%;
+  width: 50%;
+  margin-left: 25%;
   animation-delay: 0.3s;
 }
 .ourwedding-grid-4 {
@@ -178,6 +183,8 @@ body {
 .ourwedding-button {
   width: 180px;
   height: 40px;
+  border: none;
+  outline: none;
   background: url("../img/button_xem_chi_duong.png") no-repeat center/cover;
   margin-top: 2%;
   animation-delay: 0.3s;
@@ -198,7 +205,7 @@ body {
 }
 .ourweddingwoments-1 {
   width: 40%;
-  margin-top: 45%;
+  margin-top: 3%;
   animation-delay: 0.3s;
 }
 .grid-1 {
@@ -353,7 +360,7 @@ body {
 }
 .ourattendding-1 {
   width: 45%;
-  margin-top: 36%;
+  margin-top: 3%;
   animation-delay: 0.3s;
 }
 .ourattendding-2 {
@@ -417,6 +424,7 @@ textarea {
   left: 5%;
   font-size: 16px;
   outline: none;
+  font-family: "My font";
 }
 
 .input-wrapper textarea {
@@ -535,6 +543,7 @@ textarea {
   resize: vertical; /* cho phép kéo giãn */
   line-height: 1.4;
   white-space: pre-wrap; /* giữ xuống dòng */
+  font-family: "My font";
 }
 
 .form-wish-1 {
@@ -544,9 +553,17 @@ textarea {
 .submit-btn {
   width: 40%;
   margin-left: 10%;
+  border: none;
+  outline: none;
 }
 .submit-btn-img {
   width: 100%;
+}
+
+.hoa_element2 {
+  width: 60%;
+  margin-top: 5%;
+  margin-left: 22%;
 }
 
 .outwedding-gifts {
@@ -558,7 +575,7 @@ textarea {
 
 .outwedding-gifts-1 {
   width: 35%;
-  margin-top: 25%;
+  margin-top: 3%;
 }
 
 .outwedding-gifts-2 {
@@ -580,7 +597,6 @@ textarea {
 }
 .outwedding-gifts-7 {
   width: 80%;
-  margin-bottom: 20%;
 }
 
 
@@ -588,4 +604,8 @@ textarea {
   margin-bottom: 80px;   /* tạo khoảng trống 80px bên dưới */
   /* hoặc dùng padding-bottom nếu muốn kéo nội dung cách lên */
   /* padding-bottom: 80px; */
+}
+
+.hoa_element3 {
+  width: 99%;
 }
