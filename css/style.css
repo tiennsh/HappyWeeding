@@ -12,6 +12,37 @@
   font-style: normal;
 }
 
+/* Hiệu ứng xuất hiện và phập phồng */
+@keyframes appearAndPulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hiệu ứng phập phồng vô hạn */
+@keyframes gentlePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(-50px); /* dịch từ trên xuống */
@@ -176,11 +207,13 @@ body {
   animation-delay: 0.3s;
 }
 .ourwedding-11 {
-  width: 70%;
+  width: 88%;
   margin-top: 3%;
   animation-delay: 0.3s;
 }
 .ourwedding-button {
+  animation: appearAndPulse 0.6s ease-out forwards,
+             gentlePulse 2.5s ease-in-out infinite;
   width: 180px;
   height: 40px;
   border: none;
@@ -551,6 +584,8 @@ textarea {
 }
 
 .submit-btn {
+  animation: appearAndPulse 0.6s ease-out forwards,
+             gentlePulse 2.5s ease-in-out infinite;
   width: 40%;
   margin-left: 10%;
   border: none;
