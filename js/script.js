@@ -87,4 +87,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  const img = document.querySelector(".zoomable-img");
+
+    img.addEventListener("click", (e) => {
+      e.stopPropagation();
+      img.classList.add("zoomed");
+      document.body.classList.add("zoom-active");
+    });
+
+    // Khi click ra ngoài vùng ảnh → thu nhỏ lại
+    document.addEventListener("click", () => {
+      if (img.classList.contains("zoomed")) {
+        img.classList.remove("zoomed");
+        document.body.classList.remove("zoom-active");
+      }
+    });
 });
